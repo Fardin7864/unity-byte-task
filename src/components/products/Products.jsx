@@ -25,11 +25,11 @@ const Products = () => {
           <div key={product.title} className="card card-side bg-base-100 ">
             <div>
               <figure
-                onMouseEnter={() =>{ setHoveredIndex(index), setImgStyle(true)}}
-                onMouseLeave={() => {setHoveredIndex(null), setImgStyle(false)}}
+                onMouseEnter={() =>{ setHoveredIndex(index), setImgStyle(index)}}
+                onMouseLeave={() => {setHoveredIndex(null), setImgStyle(null)}}
                 className="relative overflow-hidden"
               >
-                <img src={product.img} alt="Movie" className={` w-48 h-w-48 ${imgStyle == true && "opacity-40 border-2" }`}/>
+                <img src={product.img} alt="Movie" className={` w-48 h-w-48 ${imgStyle == index && "opacity-40 border-2" }`}/>
               {hoveredIndex === index && (
                 <div className="absolute h-10 top-1/2 left-1/2 transform justify-center -translate-x-1/2 -translate-y-1/2 flex gap-4 z-10">
                   <button className=" w-9 h-9 flex justify-center items-center hover:text-[#ff6106] focus:outline-none bg-gray-200 rounded-full font-medium">
