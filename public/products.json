@@ -1,0 +1,122 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/7yM0k2P/headphone.webp",
+      "title": "Wireless Over-Ear Headphones",
+      "description": "Immerse yourself in high-quality audio with our wireless over-ear headphones. Perfect for music lovers and audiophiles.",
+      "price": 19.99,
+      "rating": 2.5,
+      "discount": 10,
+      "discounted_price": 17.99
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/qd4JW1X/printer.webp",
+      "title": "High-Speed All-in-One Printer",
+      "description": "Experience efficient and high-quality printing with our all-in-one printer. Ideal for home offices and small businesses.",
+      "price": 29.99,
+      "rating": 3.8,
+      "discount": 15,
+      "discounted_price": 25.49
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/fdswnsg/camera.webp",
+      "title": "Professional DSLR Camera",
+      "description": "Capture stunning moments with our professional DSLR camera. Perfect for photographers and enthusiasts seeking top-notch image quality.",
+      "price": 39.99,
+      "rating": 4.2,
+      "discount": 20,
+      "discounted_price": 31.99
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/KrtGQFh/xiaomi-redmi-display.webp",
+      "title": "Xiaomi Redmi Display",
+      "description": "Enjoy a crystal-clear viewing experience with the Xiaomi Redmi Display. Perfect for movie nights and gaming sessions.",
+      "price": 49.99,
+      "rating": 1.7,
+      "discount": 8,
+      "discounted_price": 45.99
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/PhGvFZz/mic.webp",
+      "title": "Professional Studio Microphone",
+      "description": "Enhance your audio recording with our professional studio microphone. Ideal for podcasters, musicians, and content creators.",
+      "price": 59.99,
+      "rating": 4.0,
+      "discount": 12,
+      "discounted_price": 52.79
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/XbX7sJV/havit-tws.webp",
+      "title": "Havit True Wireless Earbuds",
+      "description": "Experience true freedom with our Havit TWS earbuds. Enjoy high-quality sound and a comfortable fit for all-day use.",
+      "price": 69.99,
+      "rating": 4.9,
+      "discount": 18,
+      "discounted_price": 57.39
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/QYVRS5r/cameraaa.webp",
+      "title": "Compact Digital Camera",
+      "description": "Capture life's moments on the go with our compact digital camera. Easy to use and perfect for travel and everyday photography.",
+      "price": 79.99,
+      "rating": 3.5,
+      "discount": 25,
+      "discounted_price": 59.99
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/yyfjbBv/gaming-set.webp",
+      "title": "Gaming PC Set",
+      "description": "Immerse yourself in the world of gaming with our high-performance gaming PC set. Designed for gamers who demand top-tier performance.",
+      "price": 89.99,
+      "rating": 4.2,
+      "discount": 15,
+      "discounted_price": 76.49
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/p17GrwR/pc4.jpg",
+      "title": "Powerful Desktop PC",
+      "description": "Experience power and speed with our powerful desktop PC. Perfect for demanding tasks and multitasking.",
+      "price": 99.99,
+      "rating": 4.6,
+      "discount": 10,
+      "discounted_price": 89.99
+    },
+    {
+      "id": 10,
+      "img": "https://i.ibb.co/3NBbDRf/laptop.jpg",
+      "title": "Ultra-Thin Laptop",
+      "description": "Stay productive on the go with our ultra-thin laptop. Lightweight and powerful, it's perfect for professionals and students.",
+      "price": 109.99,
+      "rating": 3.9,
+      "discount": 20,
+      "discounted_price": 87.99
+    },
+    {
+      "id": 11,
+      "img": "https://i.ibb.co/6ngPpMM/keyboard.jpg",
+      "title": "Mechanical Gaming Keyboard",
+      "description": "Elevate your gaming experience with our mechanical gaming keyboard. Responsive keys and customizable lighting for a personalized setup.",
+      "price": 119.99,
+      "rating": 4.8,
+      "discount": 15,
+      "discounted_price": 101.99
+    },
+    {
+      "id": 12,
+      "img": "https://i.ibb.co/fnFZfrM/mouse.jpg",
+      "title": "High-Precision Gaming Mouse",
+      "description": "Gain a competitive edge with our high-precision gaming mouse. Designed for accuracy and comfort during extended gaming sessions.",
+      "price": 129.99,
+      "rating": 4.1,
+      "discount": 12,
+      "discounted_price": 114.39
+    }
+  ]
