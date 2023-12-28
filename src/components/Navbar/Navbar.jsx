@@ -38,6 +38,7 @@ const [fevItems, setFevItems] = useState(0)
     <li><NavLink to={'/horizontal-slider'}>Horizontal Slider</NavLink></li>
     <li><NavLink to={'/cart'}><CgShoppingCart className=' text-2xl'/><span className=' absolute right-0 top-0 bg-pink-600 rounded-full text-white text-xs p-1 font-medium'>+{cartItems}</span></NavLink></li>
     <li><NavLink ><VscHeart className=' text-2xl'/><span className=' absolute right-0 top-0 bg-pink-600 rounded-full text-white text-xs p-1 font-medium'>+{fevItems}</span></NavLink></li>
+    <li><a href="https://drive.google.com/drive/folders/1UFyC05uMgshtO8uA5fKHiKpz_hLlI7TA?usp=sharing" target='_blank'>Explanation Video</a></li>
     </>
     return (
 <div className="navbar  bg-slate-50">
