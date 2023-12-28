@@ -7,6 +7,7 @@ import { MdKeyboardArrowRight, MdChevronLeft  } from "react-icons/md";
 
 
 import "@smastrom/react-rating/style.css";
+import { addToFev, addToLocalStorage } from "../../localstorage/localstorage";
 
 const Carousel = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,6 +30,13 @@ const Carousel = ({ data }) => {
     };
   }, []);
 //   console.log(windowWidth)
+
+const handleAddToCart = (id) => { 
+  addToLocalStorage(id)
+ }
+ const handleAddToFev = (id) => { 
+  addToFev(id)
+  }
 
   const nextSlide = () => {
     setCurrentIndex(0);
@@ -81,7 +89,7 @@ const Carousel = ({ data }) => {
                     />
                     {hoveredIndex === index && (
                       <div className="absolute h-10 top-1/2 left-1/2 transform justify-center -translate-x-1/2 -translate-y-1/2 flex gap-4 z-10">
-                        <button className=" lg:w-9 lg:h-9 w-6 h-6 flex justify-center items-center hover:text-[#ff6106] focus:outline-none bg-gray-200 rounded-full font-medium">
+                        <button onClick={() => handleAddToFev(item.id)} className=" lg:w-9 lg:h-9 w-6 h-6 flex justify-center items-center hover:text-[#ff6106] focus:outline-none bg-gray-200 rounded-full font-medium">
                           <IoMdHeart className=" font-bold" />
                         </button>
                         <button className="lg:w-9 lg:h-9 w-6 h-6 flex justify-center items-center hover:text-[#ff6106] focus:outline-none bg-gray-200 rounded-full font-medium">
@@ -111,7 +119,7 @@ const Carousel = ({ data }) => {
                       ${item.price}
                     </p>
                   <div className=" flex justify-between">
-                  <button className={` bg-slate-600 rounded-lg hover:opacity-40 active:opacity-20 px-5 text-white py-1 text-xs ${showAddtoCartBtn === index && "block" || "hidden"}`}> Add To Cart</button>
+                  <button onClick={() => handleAddToCart(item)} className={` bg-slate-600 rounded-lg hover:opacity-40 active:opacity-20 px-5 text-white py-1 text-xs ${showAddtoCartBtn === index && "block" || "hidden"}`}> Add To Cart</button>
                   </div>
                 </div>
               </div>

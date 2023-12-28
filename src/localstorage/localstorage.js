@@ -38,6 +38,13 @@ const addToLocalStorage= id =>{
 
 }
 
+const deleteFromLocalStorage = (id) => {
+    const items = getFromLocalStorage();
+    const updatedItems = items.filter((item) => item.id !== id.id);
+    setToLocalStorage(JSON.stringify(updatedItems));
+    successToast('Item removed from the cart!');
+}
+
 const addToFev= id =>{
     const items = getFromLocalStorageFev()
     const exist = items.find(itemId => itemId === id);
@@ -70,4 +77,4 @@ const setToLocalStorage = (items) =>{
     localStorage.setItem('items',items);
 }
 
-export {addToLocalStorage,getFromLocalStorage,setToLocalStorage, addToFev, getFromLocalStorageFev, setToLocalStorageFev};
+export {addToLocalStorage,getFromLocalStorage,setToLocalStorage, addToFev, getFromLocalStorageFev, setToLocalStorageFev,deleteFromLocalStorage};

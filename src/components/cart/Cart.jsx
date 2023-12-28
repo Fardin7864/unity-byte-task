@@ -2,7 +2,7 @@ import { AiFillDelete, AiFillCreditCard } from "react-icons/ai";
 // import { getFromLocalStorage } from "../LocalStorage/Localstorage";
 import {  useState } from "react";
 import { Rating } from "@smastrom/react-rating";
-import { getFromLocalStorage } from "../../localstorage/localstorage";
+import { deleteFromLocalStorage, getFromLocalStorage } from "../../localstorage/localstorage";
 
 const Cart = () => {
   const [toRender, setToRender] = useState(false);
@@ -13,6 +13,11 @@ const Cart = () => {
   const handleRender = ()=>{
     setToRender(!toRender)
   }
+
+  const handleDelete = (item) => { 
+    deleteFromLocalStorage(item)
+    handleRender();
+   }
 
   const handleShowAll = () => {
     setShowAll(!showAll);
@@ -60,18 +65,20 @@ const Cart = () => {
                 <p className=" text-gray-500 text-xs lg:text-sm font-medium line-through">
                     ${item.price}
                   </p>
+              <button onClick={() => handleDelete(item)} className="btn btn-warning btn-xs"> Delete</button>
               </div>
             </div>
-          </div>          ))}
+          </div>          
+          ))}
         </div>
         <div className="bg-[#ff99004d] lg:w-1/3 h-5/6 rounded-xl my-5">
           <div className="px-5">
             <h4 className="text-xl font-bold py-4">Order Summary</h4>
             <p className="py-2">Selected Item:{products?.length} </p>
-            <p className="py-2">Total Price: ${totalPrice}</p>
-            <p className="py-2">Tex: ${tex}</p>
+            <p className="py-2">Total Price: ${Math.floor(totalPrice).toFixed(2)}</p>
+            <p className="py-2">Tex: ${Math.floor(tex).toFixed(2)}</p>
             <h4 className=" text-lg font-bold py-2">
-              Grand Total: ${totalPrice  + tex}{" "}
+              Grand Total: ${Math.floor(totalPrice  + tex).toFixed(2)}{" "}
             </h4>
           </div>
           <div className="flex flex-col gap-3">
@@ -84,16 +91,16 @@ const Cart = () => {
           </div>
         </div>
       </div>
-      { products?.length > 3 &&
+      { products?.length > 4 &&
       
       
         (!showAll ? <div className="flex justify-center my-6">
-        <button onClick={handleShowAll} className="btn btn-warning">
+        <button onClick={handleShowAll} className="btn btn-accent">
           Show All
         </button>
         </div>
          : <div className="flex justify-center my-6">
-         <button onClick={handleShowAll} className="btn btn-warning">
+         <button onClick={handleShowAll} className="btn btn-accent">
            Show less
          </button>
          </div>)
