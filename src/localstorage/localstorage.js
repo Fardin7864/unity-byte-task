@@ -26,9 +26,9 @@ const errorToast = (message) => {
  }
 const addToLocalStorage= id =>{
     const items = getFromLocalStorage()
-    const exist = items.find(itemId => itemId === id);
+    const exist = items.find(itemId => itemId.id === id.id);
     if (!exist) {
-        items.push(id);
+        items.push((id));
         setToLocalStorage(JSON.stringify(items));
         successToast('Successfully add to cart!')
     }

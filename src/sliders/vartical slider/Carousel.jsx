@@ -183,7 +183,7 @@ const Carousel = ({ data }) => {
                     </div>
                     <p>{item.description}</p>
                     <div className=" flex justify-center items-center">
-                    <button onClick={() => handleAddToCart(item.id)} className={` bg-slate-600 rounded-lg hover:opacity-40 active:opacity-20 px-5 text-white py-1 ${showAddtoCartBtn === index && "block" || "hidden"}`}> Add To Cart</button>
+                    <button onClick={() => handleAddToCart(item)} className={` bg-slate-600 rounded-lg hover:opacity-40 active:opacity-20 px-5 text-white py-1 ${showAddtoCartBtn === index && "block" || "hidden"}`}> Add To Cart</button>
                     </div>
                   </div>
                 </div>
