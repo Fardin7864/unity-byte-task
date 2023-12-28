@@ -41,6 +41,7 @@ src/
 |   |--HorizontalSlider / |-- slider.jsx
 |-- App.js
 |-- index.js
+```
 
 ## 3. Installation
 
