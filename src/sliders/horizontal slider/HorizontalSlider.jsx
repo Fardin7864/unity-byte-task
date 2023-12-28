@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Carousel from './Carousel';
 
 const HorizontalSlider = () => {
+    const [products, setProducts] = useState();
+    useEffect(() => {
+      fetch("/products.json")
+        .then((res) => res.json())
+        .then((data) => setProducts(data));
+    }, []);
     return (
-        <div className=' mt-20 border-4 border-red-600'>
-            <h1>This is horizontal </h1>
-            This is Horizontal Slider
+        <div>
+            <Carousel data={products}/>
         </div>
     );
 };

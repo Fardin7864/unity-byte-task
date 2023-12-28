@@ -91,7 +91,7 @@
     },
     {
       "id": 10,
-      "img": "https://i.ibb.co/3NBbDRf/laptop.jpg",
+      "img": "https://i.ibb.co/XbX7sJV/havit-tws.webp",
       "title": "Ultra-Thin Laptop",
       "description": "Stay productive on the go with our ultra-thin laptop. Lightweight and powerful, it's perfect for professionals and students.",
       "price": 109.99,
@@ -101,7 +101,7 @@
     },
     {
       "id": 11,
-      "img": "https://i.ibb.co/6ngPpMM/keyboard.jpg",
+      "img": "https://i.ibb.co/qd4JW1X/printer.webp",
       "title": "Mechanical Gaming Keyboard",
       "description": "Elevate your gaming experience with our mechanical gaming keyboard. Responsive keys and customizable lighting for a personalized setup.",
       "price": 119.99,
@@ -111,7 +111,7 @@
     },
     {
       "id": 12,
-      "img": "https://i.ibb.co/fnFZfrM/mouse.jpg",
+      "img": "https://i.ibb.co/7yM0k2P/headphone.webp",
       "title": "High-Precision Gaming Mouse",
       "description": "Gain a competitive edge with our high-precision gaming mouse. Designed for accuracy and comfort during extended gaming sessions.",
       "price": 129.99,

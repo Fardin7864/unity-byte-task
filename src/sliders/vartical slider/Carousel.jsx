@@ -135,7 +135,7 @@ const Carousel = ({ data }) => {
                       <img
                         src={item.img}
                         alt="Movie"
-                        className={` w-48 h-w-48 ${
+                        className={` w-52 h-full ${
                           imgStyle == index && "opacity-40 border-2"
                         }`}
                       />
