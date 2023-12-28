@@ -1,10 +1,43 @@
 import { NavLink } from 'react-router-dom';
+import { CgShoppingCart } from "react-icons/cg";
+import { VscHeart } from "react-icons/vsc";
+import { useEffect, useState } from 'react';
+import { getFromLocalStorage, getFromLocalStorageFev } from '../../localstorage/localstorage';
+
 
 const Navbar = () => {
+const [cartItems, setcatItems] = useState(0)
+const [fevItems, setFevItems] = useState(0)
+  useEffect(() => { 
+    const updateCartItems = () => {
+      const items = getFromLocalStorage();
+      setcatItems(items.length);
+    };
+
+    // Call the updateCartItems function every second
+    const intervalId = setInterval(updateCartItems, 1000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(intervalId);
+   },[])
+  useEffect(() => { 
+    const updateFevItem = () => {
+      const items = getFromLocalStorageFev();
+      setFevItems(items.length);
+    };
+
+    // Call the updateFevItem function every second
+    const intervalId = setInterval(updateFevItem, 1000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(intervalId);
+   },[])
 
     const navlinks = <>
     <li><NavLink to={'/'}>Vartical Slider</NavLink></li>
     <li><NavLink to={'/horizontal-slider'}>Horizontal Slider</NavLink></li>
+    <li><NavLink to={'/cart'}><CgShoppingCart className=' text-2xl'/><span className=' absolute right-0 top-0 bg-pink-600 rounded-full text-white text-xs p-1 font-medium'>+{cartItems}</span></NavLink></li>
+    <li><NavLink ><VscHeart className=' text-2xl'/><span className=' absolute right-0 top-0 bg-pink-600 rounded-full text-white text-xs p-1 font-medium'>+{fevItems}</span></NavLink></li>
     </>
     return (
 <div className="navbar  bg-slate-50">

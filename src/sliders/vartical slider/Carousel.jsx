@@ -7,6 +7,8 @@ import { MdKeyboardArrowRight, MdChevronLeft  } from "react-icons/md";
 
 
 import "@smastrom/react-rating/style.css";
+import { addToFev, addToLocalStorage } from "../../localstorage/localstorage";
+import { toast } from "react-toastify";
 
 const Carousel = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,7 +30,14 @@ const Carousel = ({ data }) => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-  console.log(windowWidth)
+  // console.log(windowWidth)
+
+  const handleAddToCart = (id) => { 
+    addToLocalStorage(id)
+   }
+   const handleAddToFev = (id) => { 
+    addToFev(id)
+    }
 
   const nextSlide = () => {
     if (windowWidth < 1280) {
@@ -121,7 +130,7 @@ const Carousel = ({ data }) => {
             .map((item, index) => (
               <div key={index}>
                 {/* Render single card */}
-                <div className="card card-side bg-base-100 h-72"  onMouseEnter={() => setshowAddToCartBtn(index)} onMouseLeave={() =>  setshowAddToCartBtn(null) }>
+                <div className="card card-side bg-base-100 h-96 py-8"  onMouseEnter={() => setshowAddToCartBtn(index)} onMouseLeave={() =>  setshowAddToCartBtn(null) }>
                   <div>
                     <figure
                       onMouseEnter={() => {
@@ -141,7 +150,7 @@ const Carousel = ({ data }) => {
                       />
                       {hoveredIndex === index && (
                         <div className="absolute h-10 top-1/2 left-1/2 transform justify-center -translate-x-1/2 -translate-y-1/2 flex gap-4 z-10">
-                          <button className=" w-9 h-9 flex justify-center items-center hover:text-[#ff6106] focus:outline-none bg-gray-200 rounded-full font-medium">
+                          <button onClick={() => handleAddToFev(item.id)} className=" w-9 h-9 flex justify-center items-center hover:text-[#ff6106] focus:outline-none bg-gray-200 rounded-full font-medium">
                             <IoMdHeart className=" font-bold" />
                           </button>
                           <button className="w-9 h-9 flex justify-center items-center hover:text-[#ff6106] focus:outline-none bg-gray-200 rounded-full font-medium">
@@ -164,17 +173,17 @@ const Carousel = ({ data }) => {
                       readOnly
                     />
                     <h2 className="card-title">{item.title}</h2>
-                    <div className=" flex">
-                      <p className="w-1/5 text-[#ff6106] text-xl font-medium">
+                    <div className=" flex gap-3">
+                      <p className=" text-[#ff6106] text-xl font-medium">
                         ${item.discounted_price}
                       </p>
-                      <p className="w-full text-gray-500 text-xl font-medium line-through">
+                      <p className=" text-gray-500 text-xl font-medium line-through">
                         ${item.price}
                       </p>
                     </div>
                     <p>{item.description}</p>
                     <div className=" flex justify-center items-center">
-                    <button className={` bg-slate-600 rounded-lg hover:opacity-40 active:opacity-20 px-5 text-white py-1 ${showAddtoCartBtn === index && "block" || "hidden"}`}> Add To Cart</button>
+                    <button onClick={() => handleAddToCart(item.id)} className={` bg-slate-600 rounded-lg hover:opacity-40 active:opacity-20 px-5 text-white py-1 ${showAddtoCartBtn === index && "block" || "hidden"}`}> Add To Cart</button>
                     </div>
                   </div>
                 </div>
